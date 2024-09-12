@@ -3,6 +3,7 @@ const celsiusField = document.querySelector("#celsius");
 const degree = document.querySelector("#degree");
 const convertBtn = document.querySelector("#convert-btn");
 const tempType = document.querySelector("#temp-type");
+const time = document.querySelector(".time");
 
 window.addEventListener("load", () => {
   degree.value = "";
@@ -39,3 +40,9 @@ function convertToCelsius() {
     }
   }, 1200)
 }
+
+setInterval(function(){
+  console.log("amul");
+  let date=new Date();
+  time.innerHTML=date.toLocaleTimeString();
+}, 1000);
